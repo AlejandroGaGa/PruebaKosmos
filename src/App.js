@@ -1,7 +1,7 @@
+/* eslint-disable */
 import React, { useRef, useState, useEffect } from "react";
 import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import Moveable from "react-moveable";
-import Drags from "./test/drags";
 
 /* NOTA: Solo ocupe iconos, espero no cuente como estilo. */
 
@@ -149,8 +149,8 @@ const Component = ({
   let parentBounds = parent?.getBoundingClientRect();
 
   const onResize = async (e) => {
-    const newWidth = Math.min(e.width, parentBounds.width - left); //Se calcula el nuevo ancho
-    const newHeight = Math.min(e.height, parentBounds.height - top); // se calcula el nuevo alto
+    let newWidth = Math.min(e.width, parentBounds.width - left); //Se calcula el nuevo ancho
+    let newHeight = Math.min(e.height, parentBounds.height - top); // se calcula el nuevo alto
 
     const positionMaxTop = top + newHeight;
     const positionMaxLeft = left + newWidth;
@@ -196,8 +196,8 @@ const Component = ({
     const parentWidth = document.getElementById("parent").offsetWidth;
     const parentHeight = document.getElementById("parent").offsetHeight;
     // Nuevo valores de Moveable
-    const newWidth = Math.min(Math.max(width, 0), parentWidth);
-    const newHeight = Math.min(Math.max(height, 0), parentHeight);
+    let newWidth = Math.min(Math.max(width, 0), parentWidth);
+    let newHeight = Math.min(Math.max(height, 0), parentHeight);
 
     //Estilo del elemtno en cuestioón destinop
     const { top, left } = target.style;
