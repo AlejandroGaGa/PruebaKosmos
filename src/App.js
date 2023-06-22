@@ -4,7 +4,7 @@ import { AiOutlineClose, AiFillPlusCircle } from "react-icons/ai";
 import Moveable from "react-moveable";
 
 /* NOTA: Solo ocupe iconos, espero no cuente como estilo. */
-
+/* Esta version es una correción personal, la de entrega se encuentra en este commit 875a7db*/
 const App = () => {
   const [moveableComponents, setMoveableComponents] = useState([]);
   const [selected, setSelected] = useState(null);
